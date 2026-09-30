@@ -1,0 +1,110 @@
+/* ============================================================
+   Cia Store — Stylesheet
+   Skema warna monokrom (hitam, putih, abu-abu)
+   ============================================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #111111;
+}
+
+/* ================= HEADER ================= */
+.topbar { background-color: #111111; color: #ffffff; }
+.topbar-inner {
+    max-width: 1100px; margin: 0 auto; padding: 16px 24px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.brand { font-size: 1.3rem; font-weight: 800; }
+.tagline { font-size: 0.95rem; color: #dddddd; }
+
+/* ================= HERO ================= */
+.hero { background-color: #111111; color: #ffffff; border-radius: 8px; padding: 56px 40px; margin: 32px 0 8px; }
+.hero-label { font-size: 0.75rem; letter-spacing: 0.12em; color: #bbbbbb; text-transform: uppercase; }
+.hero h2 { font-size: 2.2rem; margin: 10px 0; }
+.hero-desc { color: #dddddd; margin-bottom: 24px; }
+.hero-btn { display: inline-block; background: #ffffff; color: #111111; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 700; }
+.hero-btn:hover { background: #eeeeee; }
+
+/* ================= JUDUL ================= */
+.page-title { text-align: center; font-size: 1.4rem; margin: 36px 0 28px; }
+
+/* ================= KATALOG (CSS Grid) ================= */
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px 60px; }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.card {
+    background: #ffffff; border: 1px solid #dddddd; border-radius: 8px;
+    padding: 22px; display: flex; flex-direction: column;
+}
+.card-cat {
+    font-size: 0.75rem; color: #777777; text-transform: uppercase;
+    letter-spacing: 0.04em; margin-bottom: 10px;
+}
+.card-cat .disc { color: #111111; font-weight: 800; }
+.card h3 { font-size: 1.05rem; margin-bottom: 10px; }
+.old-price { color: #999999; text-decoration: line-through; font-size: 0.9rem; }
+.price { font-size: 1.15rem; font-weight: 800; margin: 2px 0 12px; }
+.stock { font-size: 0.9rem; color: #555555; }
+.status { font-size: 0.9rem; font-weight: 700; margin: 4px 0 14px; }
+.status.ok { color: #111111; }
+.status.out { color: #999999; }
+.btn-buy {
+    margin-top: auto; width: 100%; padding: 13px;
+    background: #111111; color: #ffffff; border: none; border-radius: 6px;
+    font-size: 0.95rem; font-weight: 700; font-family: inherit; cursor: pointer;
+}
+.btn-buy:hover { background: #000000; }
+
+/* ================= FOOTER ================= */
+footer { background-color: #111111; color: #ffffff; text-align: center; padding: 22px; font-size: 0.9rem; }
+
+/* ================= MODAL CHECKOUT ================= */
+.modal-overlay {
+    position: fixed; inset: 0; z-index: 200; padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    display: none; align-items: center; justify-content: center;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+    background: #ffffff; color: #111111;
+    border-radius: 8px; padding: 28px; width: 100%; max-width: 380px;
+    text-align: center; max-height: 90vh; overflow-y: auto;
+}
+.modal h3 { font-size: 1.4rem; margin-bottom: 6px; }
+.co-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #777777; margin-top: 14px; }
+.co-nama { font-weight: 700; font-size: 1.05rem; margin-top: 4px; }
+.co-harga { font-size: 1.7rem; font-weight: 800; margin-top: 4px; }
+.co-qris { margin: 6px 0 4px; }
+.qris-card { border: 1px solid #dddddd; border-radius: 6px; padding: 18px 16px 14px; margin-top: 10px; background: #ffffff; }
+.qris-title { font-weight: 800; font-size: 1.1rem; letter-spacing: 0.06em; }
+.qris-merchant { font-weight: 700; font-size: 0.85rem; margin-top: 6px; }
+.qris-nmid { font-size: 0.8rem; color: #555555; margin-top: 2px; }
+.qris-svg { width: 100%; max-width: 260px; height: auto; margin-top: 12px; }
+.qris-foot { font-size: 0.75rem; color: #777777; margin-top: 10px; }
+.modal .btn { width: 100%; margin-top: 10px; padding: 13px; border-radius: 6px; font-size: 0.95rem; font-weight: 700; font-family: inherit; cursor: pointer; }
+.btn-primary { background: #111111; color: #ffffff; border: none; }
+.btn-primary:hover { background: #000000; }
+.btn-ghost { background: #ffffff; color: #777777; border: 1px solid #dddddd; }
+.btn-ghost:hover { color: #111111; border-color: #111111; }
+.co-check {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: #111111; color: #ffffff; font-size: 2rem; font-weight: 800;
+    display: flex; align-items: center; justify-content: center; margin: 6px auto 16px;
+}
+.co-desc { color: #555555; margin: 8px 0 6px; line-height: 1.55; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .grid { grid-template-columns: 1fr; }
+    .tagline { display: none; }
+}
