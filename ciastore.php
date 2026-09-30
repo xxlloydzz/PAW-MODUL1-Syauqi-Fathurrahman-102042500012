@@ -1,16 +1,4 @@
 <?php
-/* ============================================================
-   Cia Store — Katalog Produk
-   ------------------------------------------------------------
-   - Seluruh data produk disimpan dalam array PHP ($products)
-   - Card produk TIDAK ditulis manual, melainkan dicetak
-     otomatis dengan perulangan foreach
-   - Status produk ditentukan dengan percabangan if/else
-     berdasarkan jumlah stok
-   - Diskon 10% untuk produk seharga Rp1.000.000 atau lebih,
-     dihitung otomatis dengan PHP (bukan ditulis manual)
-   - Checkout: modal pembayaran QRIS + simulasi cek pembayaran
-   ============================================================ */
 
 $products = [
     ["nama" => "Laptop ASUS Vivobook 14",       "kategori" => "Laptop",     "harga" => 8499000, "stok" => 12],
